@@ -18,6 +18,13 @@ export const NavButton = styled(StyledButton)`
 grid-column: 4 / 7;
 grid-row: 1 / 2;
 justify-self: end;
+svg {
+    vertical-align: bottom;
+}
+@media (min-width: 786px) {
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+}
 
 `
 

@@ -1,4 +1,5 @@
 import { NavButton } from './Button.styles';
+import { MdOutlineShoppingCart } from "react-icons/md";
 
 export default function CartButton({count}) {
     if (count <= 0) {
@@ -6,5 +7,5 @@ export default function CartButton({count}) {
     } else {
         count = "( " + count + " )";
     }
-    return <NavButton>Cart <span>{count}</span></NavButton>;
+    return <NavButton><MdOutlineShoppingCart size={20} /> Cart <span>{count}</span></NavButton>;
 }
