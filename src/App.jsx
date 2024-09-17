@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import CartButton from './components/cartButton.jsx'
+import Header from './components/header.jsx'
 import './App.css'
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <CartButton count={count} />
+      <Header count={count} />
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

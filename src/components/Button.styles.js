@@ -14,3 +14,10 @@ export const StyledButton = styled.button`
   }
 `;
 
+export const NavButton = styled(StyledButton)`
+grid-column: 4 / 7;
+grid-row: 1 / 2;
+justify-self: end;
+
+`
+

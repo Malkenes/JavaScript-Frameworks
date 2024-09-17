@@ -1,14 +1,10 @@
-import { StyledButton } from './Button.styles';
+import { NavButton } from './Button.styles';
 
-function CartButton({count}) {
+export default function CartButton({count}) {
     if (count <= 0) {
         count = "";
     } else {
         count = "( " + count + " )";
     }
-    return <div>
-        <StyledButton>Cart <span>{count}</span></StyledButton>
-    </div>;
+    return <NavButton>Cart <span>{count}</span></NavButton>;
 }
-
-export default CartButton;
