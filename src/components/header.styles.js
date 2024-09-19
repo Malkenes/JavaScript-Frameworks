@@ -2,19 +2,21 @@ import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
   position: fixed;
-  left: 0;
-  width: 100%;
   background: white;
   z-index: 1000;
+  width: 100%;
+`
+export const HeaderWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto auto;
   gap:8px;
+  padding: 2rem;
 
   @media (min-width: 786px) {
     grid-template-columns: repeat(4, auto);
     grid-template-rows: auto;
-    width: 100%;
+    align-items: center;
   }
 `
 export const LogoWrapper = styled.div`

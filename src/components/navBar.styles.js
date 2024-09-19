@@ -5,15 +5,30 @@ grid-column: 1 / 2;
 grid-row: 2 / 3;
 justify-self: start;
 button {
-background: none;
+    background: none;
+}
+div {
+width: 100%;
+z-index: -1;
+position: fixed;
+top: 0;
+left: 0;
+height: 100vh;
+max-height: ${({ $isOpen }) => ($isOpen ? "100vh" : "0")};
+transition: max-height 1s;
+overflow: hidden;
+background: #F6F8FA;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 ul {
-    position: absolute;
-    background: grey;
-    top: 0;
-    left:0;
-    display: ${({ $isOpen }) => ($isOpen ? 'block' : 'none')};
     list-style: none;
+    padding: 0;
+}
+li {
+    padding: 16px;
+    font-size: 32px;
 }
 @media (min-width: 786px) {
     grid-column: 2 / 3;
@@ -22,11 +37,18 @@ ul {
     button {
         display: none;
     }
+    div {
+    display: contents;
+    }
     ul {
         position: relative;
         background: none;
         display: flex;
         gap: 8px;
+    }
+    li {
+        padding: 0;
+        font-size: 16px;
     }
 }
 

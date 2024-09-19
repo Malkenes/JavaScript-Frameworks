@@ -5,6 +5,7 @@ background: #455B7D;
 color: white;
 display: flex;
 flex-wrap: wrap;
+justify-content: space-around;
 gap: 40px;
 padding: 32px;
 div {
