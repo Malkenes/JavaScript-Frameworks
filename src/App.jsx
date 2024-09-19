@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import Header from './components/header.jsx'
 import Footer from './components/footer.jsx'
 import Contact from './pages/contact.jsx'
+import Checkout from './pages/checkout.jsx'
 import './App.css'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <>
       <Header count={count} />
       <Contact />
+      <Checkout />
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
