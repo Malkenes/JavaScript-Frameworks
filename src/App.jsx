@@ -5,6 +5,7 @@ import Header from './components/header.jsx'
 import Footer from './components/footer.jsx'
 import Contact from './pages/contact.jsx'
 import Checkout from './pages/checkout.jsx'
+import IndexPage from './pages/index.jsx'
 import './App.css'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
   return (
     <>
       <Header count={count} />
+      <IndexPage />
       <Contact />
       <Checkout />
       <div>

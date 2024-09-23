@@ -18,6 +18,12 @@ export const StyledButton = styled.button`
   }
 `;
 
+export const FullButton = styled(StyledButton)`
+  @media (min-width: 786px) {
+  width: 100%;
+  }
+`
+
 export const NavButton = styled(StyledButton)`
 grid-column: 4 / 7;
 grid-row: 1 / 2;
