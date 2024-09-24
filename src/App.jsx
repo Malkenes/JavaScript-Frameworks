@@ -6,6 +6,7 @@ import Footer from './components/footer.jsx'
 import Contact from './pages/contact.jsx'
 import Checkout from './pages/checkout.jsx'
 import IndexPage from './pages/index.jsx'
+import Product from './pages/product.jsx'
 import './App.css'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <IndexPage />
       <Contact />
       <Checkout />
+      <Product />
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
