@@ -2,15 +2,16 @@ import { useEffect, useState } from "react";
 import { getProduct } from "../api/products/getProduct";
 import Loader from "../components/loader";
 import ProductDetails from "../components/productDetails";
+import { useParams } from "react-router-dom";
 export default function Product() {
     const [product, setProduct] = useState(null);
     const [isLoading, setLoading] = useState(true);
     const [isError, setError] = useState(null);
-
+    let { id } = useParams();
     useEffect(() => {
         async function fetchProduct() {
             try {
-                const data = await getProduct();
+                const data = await getProduct(id);
                 setProduct(data);
                 console.log(data);
             } catch (error) {
@@ -21,7 +22,6 @@ export default function Product() {
         }
         fetchProduct();
     }, [])
-    //"159fdd2f-2b12-46de-9654-d9139525ba87"
     if (isLoading) {
         return <Loader />;
     }
@@ -30,7 +30,7 @@ export default function Product() {
     }
     return (
         <div>
-            {product && <ProductDetails product={product[0]} />}
+            {product && <ProductDetails product={product} />}
         </div>
     );
 }
