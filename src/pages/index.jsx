@@ -25,16 +25,15 @@ export default function IndexPage() {
             </StyledDiscoverItem>
         </StyledDiscover>
         <StyledAbout>
-            <h2>About Us</h2>
             <div>
-            <div>
-                <p>Welcome to QuickBox, your one-stop shop for everything you need! Our mission is simple: to make shopping easy, enjoyable, and tailored to your lifestyle.</p>
-                <p>At QuickBox, we believe in putting our customers first. Thats why we focus on providing top-notch customer service, quick delivery, and products that we stand behind. Every item in our store has been selected to meet high standards of quality, ensuring you get the best, no matter what you're shopping for.</p>
+                <div>
+                    <h2>About Us</h2>
+                    <p>Welcome to QuickBox, your one-stop shop for everything you need! Our mission is simple: to make shopping easy, enjoyable, and tailored to your lifestyle.</p>
+                    <p>At QuickBox, we believe in putting our customers first. Thats why we focus on providing top-notch customer service, quick delivery, and products that we stand behind. Every item in our store has been selected to meet high standards of quality, ensuring you get the best, no matter what you're shopping for.</p>
+                </div>
             </div>
             <div>
-                Sale item
                 <ProductOnSale />
-            </div>
             </div>
             
         </StyledAbout>

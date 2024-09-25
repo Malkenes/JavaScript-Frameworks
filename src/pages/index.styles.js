@@ -50,13 +50,18 @@ img {
 
 export const StyledAbout = styled.section`
 padding: 40px 20px;
-div {
-width: 100%;
-}
+display: flex;
+flex-direction: column;
+gap: 40px;
+align-items: center;
 @media (min-width: 786px) {
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
     > div {
         display: flex;
-        gap: 20px;
+        justify-content: center;
+        width: 50%;
     }
 }
 

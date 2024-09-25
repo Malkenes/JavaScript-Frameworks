@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import ProductCard from "./productCard";
 import { FullButton } from "./Button.styles";
 import useApi from "../hooks/useApi";
+import { StyledProductOnSale } from "./productOnSale.styles";
 
 export default function ProductOnSale() {
     const { data, isLoading, isError } = useApi();
-
     if (isLoading) { return <Loader />; }
 
     if (isError) { return <p>{isError}</p>; }
@@ -15,10 +15,12 @@ export default function ProductOnSale() {
     const productsOnSale = filterOnSale(data.data);
     const randomProduct = getRandomProduct(productsOnSale);
     return (
-        <Link to={`/product/${randomProduct.id}`}>
-            <p>{Math.floor(randomProduct.price - randomProduct.discountedPrice)}</p>
-            <ProductCard  data={randomProduct}/>
+        <StyledProductOnSale>
+            <span>Save {Math.floor(randomProduct.price - randomProduct.discountedPrice)} kr</span>
+            <Link to={`/product/${randomProduct.id}`}>
+                <ProductCard  data={randomProduct}/>
+            </Link>
             <FullButton>Discover Limited Time Offers</FullButton>
-        </Link>
+        </StyledProductOnSale>
     )
 }
