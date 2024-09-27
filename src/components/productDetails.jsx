@@ -2,7 +2,11 @@ import { StyledProductDetails, StyledProductReview } from "./productDetails.styl
 import { FullButton } from "./Button.styles"
 import StarRating from "./starRating"
 import Price from "./price"
+import { useCartStore } from "../stores/useCartStore"
 export default function ProductDetails({product}) {
+    const { cart, addToCart, increaseQuantity, decreaseQuantity, removeFromCart, totalItems } = useCartStore();
+    console.log(cart);
+    console.log(product);
     return (
         <div>
             <StyledProductDetails>
@@ -13,7 +17,7 @@ export default function ProductDetails({product}) {
                     <h1>{product.title}</h1>
                     <StarRating rating={Math.floor(product.rating)} />
                     <Price price={product.price} discountedPrice={product.discountedPrice} />
-                    <FullButton>Add to Cart</FullButton>
+                    <FullButton onClick={() => addToCart(product)}>Add to Cart</FullButton>
                 </div>
             </StyledProductDetails>
             <div>
