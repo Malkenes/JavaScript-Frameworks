@@ -1,36 +1,21 @@
-import { useEffect, useState } from "react";
-import { getProduct } from "../api/products/getProduct";
 import Loader from "../components/loader";
 import ProductDetails from "../components/productDetails";
+import { useParams } from "react-router-dom";
+import useApi from "../hooks/useApi";
 export default function Product() {
-    const [product, setProduct] = useState(null);
-    const [isLoading, setLoading] = useState(true);
-    const [isError, setError] = useState(null);
-
-    useEffect(() => {
-        async function fetchProduct() {
-            try {
-                const data = await getProduct();
-                setProduct(data);
-                console.log(data);
-            } catch (error) {
-                setError(error.message)
-            } finally {
-                setLoading(false);
-            }
-        }
-        fetchProduct();
-    }, [])
-    //"159fdd2f-2b12-46de-9654-d9139525ba87"
+    
+    let { id } = useParams();
+    const { data, isLoading, isError } = useApi(`https://v2.api.noroff.dev/online-shop/${id}`);
     if (isLoading) {
         return <Loader />;
     }
     if (isError) {
         return <p>{isError}</p>;
     }
+    const product = data.data;
     return (
         <div>
-            {product && <ProductDetails product={product[0]} />}
+            {product && <ProductDetails product={product} />}
         </div>
     );
 }

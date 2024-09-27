@@ -30,6 +30,9 @@ li {
     padding: 16px;
     font-size: 32px;
 }
+a {
+    color: black;
+}
 @media (min-width: 786px) {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
