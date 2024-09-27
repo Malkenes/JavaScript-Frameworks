@@ -1,12 +1,26 @@
 import { StyledIndex, StyledHero, StyledHeroImage, StyledDiscover, StyledDiscoverItem , StyledAbout } from "./index.styles"
-import { FullButton } from "../components/Button.styles"
+import { StyledLink, StyledAnchor } from "../components/Button.styles"
 import ProductOnSale from "../components/productOnSale"
+import ProductList from "../components/productList"
+import useApi from "../hooks/useApi"
+import Loader from "../components/loader"
 import redBag from "../assets/images/4-bag-red.jpg"
 import shampoo from "../assets/images/11-shampoo.jpg"
 import toyCar from "../assets/images/12-toy-car.jpg"
 export default function IndexPage() {
+    const { data , isLoading, isError } = useApi("https://v2.api.noroff.dev/online-shop/",);
+    if (isLoading) { return <Loader />; }
+
+    if (isError) { return <p>{isError}</p>; }
     return <StyledIndex>
-        <StyledHero><StyledHeroImage></StyledHeroImage><div><h1>Discover The Latest Trends in Online Shopping</h1>Welcome to our online store, where we offer a carefully curated selection of high-quality products that cater to your every need<FullButton>Shop Now</FullButton></div></StyledHero>
+        <StyledHero>
+            <StyledHeroImage />
+            <div>
+                <h1>Discover The Latest Trends in Online Shopping</h1>
+                Welcome to our online store, where we offer a carefully curated selection of high-quality products that cater to your every need
+                <StyledAnchor href="#product-section">Shop Now</StyledAnchor>
+            </div>
+        </StyledHero>
         <StyledDiscover>
             <StyledDiscoverItem>
                 <div><img src={redBag} alt="" /></div>
@@ -33,9 +47,16 @@ export default function IndexPage() {
                 </div>
             </div>
             <div>
-                <ProductOnSale />
+                <ProductOnSale productData={data} />
             </div>
             
         </StyledAbout>
+        <section style={{height: "500px"}}></section>
+        <section id="product-section">
+            <h2>Products</h2>
+            <div style={{display: "flex"}}>
+                <ProductList data={data} />
+            </div>
+        </section>
     </StyledIndex>
 }

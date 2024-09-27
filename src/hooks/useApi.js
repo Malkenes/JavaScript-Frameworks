@@ -1,14 +1,13 @@
 import React, {useState, useEffect} from "react"
-export default function useApi(id = "") {
+export default function useApi(url) {
     
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(null);
-
     useEffect(() => {
         async function getData() {
             try {
-                const response = await fetch(`https://v2.api.noroff.dev/online-shop/${id}`);
+                const response = await fetch(url);
                 const results = await response.json();
                 setData(results)
             } catch (error) {
@@ -18,7 +17,7 @@ export default function useApi(id = "") {
             }
         }
         getData();
-    }, []);
-    return {data, isLoading, isError};
+    }, [url]);
+    return { data , isLoading, isError };
 
 }

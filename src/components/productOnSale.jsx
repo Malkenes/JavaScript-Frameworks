@@ -6,13 +6,8 @@ import { FullButton } from "./Button.styles";
 import useApi from "../hooks/useApi";
 import { StyledProductOnSale } from "./productOnSale.styles";
 
-export default function ProductOnSale() {
-    const { data, isLoading, isError } = useApi();
-    if (isLoading) { return <Loader />; }
-
-    if (isError) { return <p>{isError}</p>; }
-
-    const productsOnSale = filterOnSale(data.data);
+export default function ProductOnSale({productData}) {
+    const productsOnSale = filterOnSale(productData.data);
     const randomProduct = getRandomProduct(productsOnSale);
     return (
         <StyledProductOnSale>
@@ -22,5 +17,5 @@ export default function ProductOnSale() {
             </Link>
             <FullButton>Discover Limited Time Offers</FullButton>
         </StyledProductOnSale>
-    )
+    );
 }

@@ -3,8 +3,9 @@ import ProductDetails from "../components/productDetails";
 import { useParams } from "react-router-dom";
 import useApi from "../hooks/useApi";
 export default function Product() {
+    
     let { id } = useParams();
-    const { data, isLoading, isError } = useApi(id);
+    const { data, isLoading, isError } = useApi(`https://v2.api.noroff.dev/online-shop/${id}`);
     if (isLoading) {
         return <Loader />;
     }

@@ -1,6 +1,6 @@
 import { MdOutlineStar } from "react-icons/md";
 import { StyledStarRating } from "./starRating.styles";
-export default function StarRating({ rating, reviews }) {
+export default function StarRating({ rating }) {
     return (
         <StyledStarRating $rating={rating}>
             <MdOutlineStar />
@@ -8,7 +8,6 @@ export default function StarRating({ rating, reviews }) {
             <MdOutlineStar />
             <MdOutlineStar />
             <MdOutlineStar />
-            <small>{reviews} reviews</small>
         </StyledStarRating>
     );
 }
