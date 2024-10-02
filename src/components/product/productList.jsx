@@ -1,6 +1,6 @@
-import ProductCard from "./product/productCard";
+import ProductCard from "./productCard";
 import { StyledProductList } from "./productList.styles";
-import { StyledLink } from "./Button.styles";
+import { StyledLink } from "../Button.styles";
 export default function ProductList({data}) {
     const products = data;
     return (

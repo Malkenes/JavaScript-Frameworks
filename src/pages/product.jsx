@@ -3,7 +3,7 @@ import ProductDetails from "../components/product/productDetails";
 import { useParams } from "react-router-dom";
 import useApi from "../hooks/useApi";
 import { filterByTag, getProductById } from "../utils/productFilterUtils";
-import ProductList from "../components/productList";
+import ProductList from "../components/product/productList";
 export default function Product() {
     let { id } = useParams();
     const { data, isLoading, isError } = useApi(`https://v2.api.noroff.dev/online-shop/`);
