@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const StyledProductDetails = styled.div`
-padding: 40px 20px;
-display: flex;
-flex-direction: column;
+display: grid;
+grid-template-columns: 1fr;
 gap: 20px;
 text-align: start;
 
@@ -12,14 +11,12 @@ h1 {
 }
 img {
     width: 100%;
+    height: 500px;
+    object-fit: cover;
     border-radius: 0.5em;
 }
 @media (min-width: 786px) {
-    flex-direction: row;
-    align-items: center;
-    > div {
-        width: 50%;
-    }
+    grid-template-columns: 60% auto;
 }
 `;
 

@@ -1,17 +1,18 @@
 import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
-  position: relative;
+  position: fixed;
   background: white;
   z-index: 1000;
   width: 100%;
+  max-width: 1280px;
 `
 export const HeaderWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto auto;
   gap:8px;
-  padding: 2rem;
+  padding: 1em;
 
   @media (min-width: 786px) {
     grid-template-columns: repeat(4, auto);

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const StyledStarRating = styled.span`
+export const StyledStarRating = styled.div`
+margin-bottom: 1em;
+display: flex;
 svg {
     color: grey;
 }

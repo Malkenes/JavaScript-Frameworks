@@ -9,7 +9,7 @@ export default function useApi(url) {
             try {
                 const response = await fetch(url);
                 const results = await response.json();
-                setData(results)
+                setData(results.data);
             } catch (error) {
                 setIsError(error.message);
             } finally {

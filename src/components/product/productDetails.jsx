@@ -1,19 +1,22 @@
 import { StyledProductDetails, StyledProductReview } from "./productDetails.styles"
-import { FullButton } from "./Button.styles"
-import StarRating from "./starRating"
-import Price from "./price"
+import { FullButton } from "../Button.styles"
+import StarRating from "../shared/starRating"
+import Price from "../shared/price"
+import { useCartStore } from "../../stores/useCartStore"
 export default function ProductDetails({product}) {
+    const { cart, addToCart } = useCartStore();
     return (
-        <div>
+        <section>
             <StyledProductDetails>
                 <div>
                     <img src={product.image.url} alt={product.image.alt} />
                 </div>
                 <div>
                     <h1>{product.title}</h1>
-                    <StarRating rating={Math.floor(product.rating)} />
+                    <StarRating rating={Math.floor(product.rating)} size="24" />
                     <Price price={product.price} discountedPrice={product.discountedPrice} />
-                    <FullButton>Add to Cart</FullButton>
+                    <FullButton onClick={() => addToCart(product)}>Add to Cart</FullButton>
+                    <p>{product.description}</p>
                 </div>
             </StyledProductDetails>
             <div>
@@ -27,6 +30,6 @@ export default function ProductDetails({product}) {
                 ))}
 
             </div>
-        </div>
+        </section>
     )
 }

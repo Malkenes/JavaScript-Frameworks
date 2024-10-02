@@ -8,7 +8,6 @@ display: flex;
 flex-direction: column;
 gap: 20px;
 min-height: 100vh;
-padding: 40px 20px;
 background: #F6F8FA;
 @media (min-width: 786px) {
     flex-direction: row;
@@ -26,7 +25,6 @@ background-position: center;
 }
 `
 export const StyledDiscover = styled.section`
-padding: 40px 20px;
 display: flex;
 gap: 20px;
 flex-direction: column;
@@ -49,7 +47,6 @@ img {
 `
 
 export const StyledAbout = styled.section`
-padding: 40px 20px;
 display: flex;
 flex-direction: column;
 gap: 40px;
@@ -64,5 +61,15 @@ align-items: center;
         width: 50%;
     }
 }
+`
 
+export const StyledFilterBar = styled.div`
+    display: flex;
+    gap: 1em;
+    margin-bottom: 20px;
+    button {
+        background: #FDEEED;
+        padding: 12px 8px;
+        text-wrap: nowrap;
+    }
 `
