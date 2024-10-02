@@ -8,38 +8,17 @@ export const StyledHeader = styled.header`
   max-width: 1280px;
 `
 export const HeaderWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: auto auto;
-  gap:8px;
+  display: flex;
+  gap: 1em;
   padding: 1em;
-
-  @media (min-width: 786px) {
-    grid-template-columns: repeat(4, auto);
-    grid-template-rows: auto;
-    align-items: center;
-  }
+  align-items: center;
 `
 export const LogoWrapper = styled.div`
-  grid-column: 1 / 4;
-  grid-row: 1 / 2;
-  img {
-    display: block;
-  }
-  @media (min-width: 786px) {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-
-`
-export const SearchWrapper = styled.div`
-  width: 100%;
-  grid-column: 2 / 7;
-  grid-row: 2 / 3;
-  border: solid 1px #F5F5F5;
-  @media (min-width: 786px) {
-    grid-column: 3 / 4;
-    grid-row: 1 / 2;
-  }
-
+flex: 1;
+img {
+  display: block;
+}
+@media (min-width: 786px) {
+  order: -1;
+}
 `

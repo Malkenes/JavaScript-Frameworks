@@ -40,15 +40,7 @@ export const FullButton = styled(StyledButton)`
 export const NavButton = styled(StyledLink)`
 align-items: center;
 gap: 4px;
-grid-column: 4 / 7;
-grid-row: 1 / 2;
 justify-self: end;
 width: 100px;
-
-    
-@media (min-width: 786px) {
-  grid-column: 4 / 5;
-  grid-row: 1 / 2;
-}
 `;
 
