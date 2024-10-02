@@ -2,11 +2,14 @@
   max-width: 1280px;
   text-align: center;
   width: 100%;
+  margin: auto;
 }
 main {
-  margin-top: 200px;
-  padding: 20px;
+  padding-top: 148px;
   text-align: start;
+}
+main > section {
+  padding: 40px 20px;
 }
 .logo {
   height: 6em;
@@ -36,10 +39,8 @@ main {
   }
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+@media (min-width: 786px) {
+  main {
+    padding-top: 88px;
+  }
 }

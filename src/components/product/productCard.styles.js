@@ -15,9 +15,4 @@ h3 {
 margin-top: 0;
 margin-bottom: 0.5em;
 }
-div {
-    display: flex;
-    gap: 0.5em; 
-    margin-bottom: 1em;
-}
 `

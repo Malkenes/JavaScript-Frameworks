@@ -43,7 +43,7 @@ gap: 4px;
 grid-column: 4 / 7;
 grid-row: 1 / 2;
 justify-self: end;
-width: initial;
+width: 100px;
 
     
 @media (min-width: 786px) {

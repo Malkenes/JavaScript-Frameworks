@@ -1,18 +1,18 @@
-import { useState } from 'react'
-import Layout from './components/layout.jsx'
+import Layout from './components/layout/layout.jsx'
 import Contact from './pages/contact.jsx'
 import Checkout from './pages/checkout.jsx'
 import IndexPage from './pages/index.jsx'
 import Product from './pages/product.jsx'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import './App.css'
+import ScrollToTop from './components/layout/scrollToTop.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<IndexPage />} />

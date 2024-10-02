@@ -1,13 +1,15 @@
-import Loader from "./loader";
-import { filterOnSale , getRandomProduct } from "../utils/productFilterUtils";
+import Loader from "../loader";
+import { filterOnSale , getRandomProduct } from "../../utils/productFilterUtils";
 import { Link } from "react-router-dom";
 import ProductCard from "./productCard";
-import { FullButton } from "./Button.styles";
-import useApi from "../hooks/useApi";
+import { StyledAnchor } from "../Button.styles";
+import useApi from "../../hooks/useApi";
 import { StyledProductOnSale } from "./productOnSale.styles";
+import { useProductStore } from "../../stores/useProductStore";
 
 export default function ProductOnSale({productData}) {
-    const productsOnSale = filterOnSale(productData.data);
+    const { setOnSale } = useProductStore();
+    const productsOnSale = filterOnSale(productData);
     const randomProduct = getRandomProduct(productsOnSale);
     return (
         <StyledProductOnSale>
@@ -15,7 +17,7 @@ export default function ProductOnSale({productData}) {
             <Link to={`/product/${randomProduct.id}`}>
                 <ProductCard  data={randomProduct}/>
             </Link>
-            <FullButton>Discover Limited Time Offers</FullButton>
+            <StyledAnchor onClick={setOnSale} href="#product-section">Discover Limited Time Offers</StyledAnchor>
         </StyledProductOnSale>
     );
 }
