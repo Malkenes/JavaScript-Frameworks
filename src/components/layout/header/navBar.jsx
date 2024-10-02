@@ -8,10 +8,10 @@ export default function NavBar({isOpen, setIsOpen}) {
         <div>
         <ul>
             <li>
-                <Link to="/">Home</Link>
+                <Link to="/" onClick={() => {setIsOpen(false)}}>Home</Link>
             </li>
             <li>
-                <Link to="/contact">Contact</Link>
+                <Link to="/contact" onClick={() => {setIsOpen(false)}}>Contact</Link>
             </li>
             <li><s>About</s></li>
         </ul>

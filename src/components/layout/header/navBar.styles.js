@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const StyledNavBar = styled.nav`
-grid-column: 1 / 2;
-grid-row: 2 / 3;
 justify-self: start;
 button {
     background: none;
@@ -34,8 +32,6 @@ a {
     color: black;
 }
 @media (min-width: 786px) {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
 
     button {
         display: none;

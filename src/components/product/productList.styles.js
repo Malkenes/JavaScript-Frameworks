@@ -1,10 +1,18 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const fadeIn = keyframes`
+from {opacity: 0;}
+to {opacity: 1;}
+`;
 
 export const StyledProductList = styled.div`
+    flex: 1;
     display: flex;
     flex-wrap: wrap;
     gap: 2em;
     margin-bottom: 20px;
+    animation: ${fadeIn} 1s ease-in-out;
+
     > div {
         width: 100%;
         border-radius: 1em;

@@ -63,13 +63,59 @@ align-items: center;
 }
 `
 
-export const StyledFilterBar = styled.div`
+export const ProductContainer = styled.div`
+@media (min-width: 1000px) {
     display: flex;
-    gap: 1em;
-    margin-bottom: 20px;
-    button {
-        background: #FDEEED;
-        padding: 12px 8px;
-        text-wrap: nowrap;
+    align-items: flex-start;
+}
+`
+export const StyledSorting = styled.div`
+display: flex;
+flex-direction: column;
+gap: 1em;
+margin-bottom: 20px;
+@media (min-width: 576px) {
+    flex-direction: row;
+}
+@media (min-width: 1000px) {
+    flex-direction: column;
+    max-width: 300px;
+    margin-right: 20px;
+}
+`
+
+export const StyledFilterBar = styled.div`
+display: flex;
+overflow-x: scroll;
+scrollbar-color: #FDEEED #455B7D;
+scrollbar-width: thin;
+gap: 0.5em;
+padding-bottom: 0.5em;
+button {
+    background: #FDEEED;
+    text-wrap: nowrap;
+    &:focus {
+    background: #455B7D;
     }
+}
+@media (min-width: 1000px) {
+    flex-direction: column;
+}
+`
+export const StyledSearchForm = styled.div`
+display: flex;
+padding: 8px;
+min-width: 250px;
+border: solid 1px #78737385;
+border-radius: 8px;
+margin: auto 0;
+input {
+    outline: none;
+    border: none;
+    width: 100%;
+}
+button {
+    background: #78737385;
+    padding: 4px;
+}
 `

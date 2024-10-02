@@ -5,7 +5,7 @@
   margin: auto;
 }
 main {
-  padding-top: 148px;
+  padding-top: 88px;
   text-align: start;
 }
 main > section {
@@ -39,8 +39,3 @@ main > section {
   }
 }
 
-@media (min-width: 786px) {
-  main {
-    padding-top: 88px;
-  }
-}
