@@ -1,4 +1,4 @@
-import { StyledIndex, StyledHero, StyledHeroImage, StyledDiscover, StyledDiscoverItem , StyledAbout, StyledFilterBar } from "./index.styles"
+import { StyledIndex, StyledHero, StyledHeroImage, StyledDiscover, StyledDiscoverItem , StyledAbout, StyledFilterBar, StyledSearchForm, StyledSorting } from "./index.styles"
 import { StyledLink, StyledAnchor } from "../components/Button.styles"
 import ProductOnSale from "../components/product/productOnSale"
 import ProductList from "../components/product/productList"
@@ -9,6 +9,7 @@ import shampoo from "../assets/images/11-shampoo.jpg"
 import toyCar from "../assets/images/12-toy-car.jpg"
 import { useProductStore } from "../stores/useProductStore"
 import { useEffect } from "react"
+import { MdOutlineSearch } from "react-icons/md";
 export default function IndexPage() {
     const { data , isLoading, isError } = useApi("https://v2.api.noroff.dev/online-shop/",);
     const { filteredProducts, setProducts, setFilterTag, clearFilter } = useProductStore();
@@ -62,7 +63,10 @@ export default function IndexPage() {
         </StyledAbout>
         <section id="product-section">
             <h2>Products</h2>
+            <StyledSorting>
+            <SearchBar />
             <FilterBar products={data} />
+            </StyledSorting>
             <ProductList data={filteredProducts} />
         </section>
     </StyledIndex>
@@ -88,7 +92,7 @@ function FilterBar({ products }) {
 
     filterListArray.sort((a, b) => b.count - a.count);
     return (
-        <div style={{ position: "relative", overflowX: "auto", marginBottom: "20px" }}>
+        <div style={{ position: "relative", overflowX: "auto" }}>
             <StyledFilterBar>
                 <button onClick={clearFilter}>All</button>
                 <button onClick={setOnSale}>on sale</button>
@@ -98,4 +102,25 @@ function FilterBar({ products }) {
             </StyledFilterBar>
         </div>
     );
+}
+
+function SearchBar() {
+    const { searchQuery, setSearchQuery, clearFilter } = useProductStore();
+
+    function handleSearch(event) {
+        const query = event.target.value;
+        setSearchQuery(query);
+    }
+    return (
+        <StyledSearchForm>
+            <MdOutlineSearch size={32} />
+            <input 
+                type="text"
+                value={searchQuery}
+                onChange={handleSearch}
+                placeholder="Search..."
+            />
+            <button onClick={clearFilter}>clear</button>
+        </StyledSearchForm>
+    )
 }

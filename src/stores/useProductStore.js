@@ -5,6 +5,7 @@ export const useProductStore = create((set) => ({
 
     products: [],
     filteredProducts: [],
+    searchQuery: "",
     
     setProducts: (products) => set({products, filteredProducts: products}),
 
@@ -14,7 +15,15 @@ export const useProductStore = create((set) => ({
     setOnSale: () => set((state) => ({
         filteredProducts: filterOnSale(state.filteredProducts),
     })),
+    setSearchQuery: (query) => set((state) => ({
+        searchQuery: query,
+        filteredProducts: state.products.filter((product) => 
+            product.title.toLowerCase().includes(query.toLowerCase())
+        ),
+    })),
+
     clearFilter: () => set((state) => ({
+        searchQuery: "",
         filteredProducts: state.products,
     })),
 
