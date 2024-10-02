@@ -1,4 +1,4 @@
-import { StyledIndex, StyledHero, StyledHeroImage, StyledDiscover, StyledDiscoverItem , StyledAbout, StyledFilterBar, StyledSearchForm, StyledSorting } from "./index.styles"
+import { StyledIndex, StyledHero, StyledHeroImage, StyledDiscover, StyledDiscoverItem , StyledAbout, StyledFilterBar, StyledSearchForm, StyledSorting, ProductContainer } from "./index.styles"
 import { StyledLink, StyledAnchor } from "../components/Button.styles"
 import ProductOnSale from "../components/product/productOnSale"
 import ProductList from "../components/product/productList"
@@ -12,11 +12,10 @@ import { useEffect } from "react"
 import { MdOutlineSearch } from "react-icons/md";
 export default function IndexPage() {
     const { data , isLoading, isError } = useApi("https://v2.api.noroff.dev/online-shop/",);
-    const { filteredProducts, setProducts, setFilterTag, clearFilter } = useProductStore();
+    const { filteredProducts, setProducts } = useProductStore();
     useEffect(() => {
         if (data && !isLoading) {
             setProducts(data);
-            console.log("test");
         }
     }, [data, isLoading, setProducts]);
     if (isLoading) { return <Loader />; }
@@ -63,18 +62,20 @@ export default function IndexPage() {
         </StyledAbout>
         <section id="product-section">
             <h2>Products</h2>
-            <StyledSorting>
-            <SearchBar />
-            <FilterBar products={data} />
-            </StyledSorting>
-            <ProductList data={filteredProducts} />
+            <ProductContainer>
+                <StyledSorting>
+                    <SearchBar />
+                    <FilterBar />
+                    </StyledSorting>
+                <ProductList data={filteredProducts} />
+            </ProductContainer>
         </section>
     </StyledIndex>
 }
 
-function FilterBar({ products }) {
+function FilterBar() {
     const filterList = {};
-    const { setFilterTag, setOnSale, clearFilter } = useProductStore();
+    const { products, setFilterTag, setOnSale, clearFilter } = useProductStore();
 
     products.forEach(product => {
         product.tags.forEach(tag => {
@@ -92,7 +93,6 @@ function FilterBar({ products }) {
 
     filterListArray.sort((a, b) => b.count - a.count);
     return (
-        <div style={{ position: "relative", overflowX: "auto" }}>
             <StyledFilterBar>
                 <button onClick={clearFilter}>All</button>
                 <button onClick={setOnSale}>on sale</button>
@@ -100,7 +100,6 @@ function FilterBar({ products }) {
                     <button key={filter.tag} onClick={() => setFilterTag(filter.tag)}>{filter.tag}</button>
                 ))}
             </StyledFilterBar>
-        </div>
     );
 }
 
