@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const StyledCheckout = styled.main`
 display: flex;
 flex-direction: column;
-gap: 20px;
 ul {
-list-style: none;
+    list-style: none;
+    padding: 0;
 }
 `
 
@@ -15,7 +15,7 @@ export const StyledCheckoutItem = styled.li`
     align-items: center;
     gap: 0.5em;
     padding: 1em;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #78737385;
     img {
         width: 100px;
         height: 100px;
@@ -43,6 +43,7 @@ export const StyledAlterQuantity = styled.div`
 export const StyledPayment = styled.fieldset`
 border-radius: 10px;
 padding: 10px 0;
+margin-bottom: 20px;
 legend {
 font-weight: bold;
 padding: 0 10px; 
