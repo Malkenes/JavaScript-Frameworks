@@ -3,6 +3,7 @@ import { MdOutlineRemove , MdOutlineAdd, MdOutlineCreditCard} from "react-icons/
 import { StyledCheckout, StyledCheckoutItem, StyledAlterQuantity, StyledPayment, PaymentOption} from "./checkout.styles";
 import { StyledButton } from "../components/Button.styles";
 import { useCartStore } from "../stores/useCartStore";
+import CheckoutButton from "../components/checkoutButton";
 import Price from "../components/shared/price";
 import { useState } from "react";
 import { SiKlarna, SiPaypal } from "react-icons/si";
@@ -11,6 +12,7 @@ export default function Checkout() {
     const totalPrice = useCartStore((state) => state.totalPrice(state));
     const totalDiscountedPrice = useCartStore((state) => state.totalDiscountedPrice(state));
     return <StyledCheckout>
+        <section>
         <h1>Checkout</h1>
         <ul>
             {cart.map((item) => (
@@ -43,8 +45,11 @@ export default function Checkout() {
                 </StyledCheckoutItem>
                 )}
         </ul>
-        <PaymentMethodSelector />
-        <StyledButton>Continue to Payment</StyledButton>
+        </section>
+        <section>
+            <PaymentMethodSelector />
+            <CheckoutButton />
+        </section>
     </StyledCheckout>
 }
 
