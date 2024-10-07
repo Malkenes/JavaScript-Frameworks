@@ -10,7 +10,7 @@ export default function ProductCard({data}) {
         <StyledProductCardInfo>
             <h3>{data.title}</h3>
             <div>
-                <StarRating rating={Math.floor(data.rating)} />
+                <StarRating rating={data.rating} />
             </div>            
             <Price price={data.price} discountedPrice={data.discountedPrice} />
         </StyledProductCardInfo>
