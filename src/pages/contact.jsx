@@ -1,7 +1,12 @@
 import { StyledContact, ContactPageWrapper, FormWrapper } from "./contact.styles"
+import ContactForm from "../components/contactForm"
 export default function Contact() {
     return <StyledContact>
-        <h1>Contact Us</h1>
-        <ContactPageWrapper><FormWrapper>ContactForm</FormWrapper></ContactPageWrapper>
+        <ContactPageWrapper>
+            <FormWrapper>
+                <h1>Contact Us</h1>
+                <ContactForm />
+            </FormWrapper>
+        </ContactPageWrapper>
     </StyledContact>
 }

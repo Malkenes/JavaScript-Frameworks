@@ -32,6 +32,7 @@ export const StyledButton = styled.button`
 `;
 
 export const FullButton = styled(StyledButton)`
+margin-top: 10px;
   @media (min-width: 786px) {
   width: 100%;
   }

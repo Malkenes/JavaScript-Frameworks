@@ -4,7 +4,7 @@ import { StyledNavBar } from "./navBar.styles";
 import { Link } from "react-router-dom";
 export default function NavBar({isOpen, setIsOpen}) {
     return <StyledNavBar $isOpen={isOpen}>
-        <button onClick={() => {setIsOpen(!isOpen)}}><MdOutlineMenu size={32} /></button>
+        <button onClick={() => {setIsOpen(!isOpen)}} aria-label="Menu"><MdOutlineMenu size={32} /></button>
         <div>
         <ul>
             <li>

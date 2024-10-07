@@ -1,16 +1,18 @@
-import { StyledCheckoutSuccess, CheckContainer } from "./checkoutSuccess.styles";
+import * as S from "./checkoutSuccess.styles"
+import { Link } from "react-router-dom";
 import { MdOutlineCheck } from "react-icons/md";
 export default function CheckoutSuccess() {
     return (
     <main>
-        <StyledCheckoutSuccess>
-            <CheckContainer>
+        <S.StyledCheckoutSuccess>
+            <S.CheckContainer>
                 <MdOutlineCheck size={148} />
-            </CheckContainer>
-            <p>Thank you for the purchase!</p>
+            </S.CheckContainer>
+            <h1>Thank you for the purchase!</h1>
             <p>We have magically recived your payment and delivery details</p>
             <p>Anticipate your order's arrival on November 31.</p>
-        </StyledCheckoutSuccess>
+            <Link to={"/"}>Back to Store</Link>
+        </S.StyledCheckoutSuccess>
     </main>
     );
 }

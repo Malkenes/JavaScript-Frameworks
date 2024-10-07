@@ -23,11 +23,11 @@ export default function Checkout() {
                         <h2 style={{flexGrow: "1", textAlign: "center"}}>{item.title}</h2>
                         <div style={{display: "flex", flexDirection: "column", alignItems: "flex-end", gap: "0.5em"}}>
                             <StyledAlterQuantity>
-                                <button onClick={() => increaseQuantity(item.id)}>
+                                <button onClick={() => increaseQuantity(item.id)} aria-label="add one">
                                     <MdOutlineAdd />
                                 </button>
                                 {item.quantity}
-                                <button onClick={() => decreaseQuantity(item.id)}>
+                                <button onClick={() => decreaseQuantity(item.id)} aria-label="remove one">
                                     <MdOutlineRemove />
                                 </button>
                             </StyledAlterQuantity>

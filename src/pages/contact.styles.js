@@ -14,10 +14,10 @@ export const ContactPageWrapper = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
-height: 100%;
+min-height: 100%;
 `
 export const FormWrapper = styled.div`
-background: rgba(255, 255, 255, 0.6);
+background: rgba(255, 255, 255, 0.8);
 min-height: 200px;
 min-width: 200px;
 padding: 20px;

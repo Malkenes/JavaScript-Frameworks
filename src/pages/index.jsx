@@ -118,6 +118,7 @@ function SearchBar() {
                 value={searchQuery}
                 onChange={handleSearch}
                 placeholder="Search..."
+                aria-label="search"
             />
             <button onClick={clearFilter}>clear</button>
         </StyledSearchForm>
