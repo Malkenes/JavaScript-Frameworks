@@ -12,7 +12,7 @@ export default function ProductOnSale({productData}) {
     const [randomProduct, setProducts] = useState(getRandomProduct(products))
     useEffect(() => {
         setProducts(getRandomProduct(products));
-    },[randomProduct])
+    },[]);
 
     return (
         <StyledProductOnSale>

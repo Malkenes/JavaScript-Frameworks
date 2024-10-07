@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import {useState} from "react"
 import CartButton from "../../cartButton"
 import NavBar from "./navBar"
 import QuickBoxLogo from "../../../assets/QuickBox.svg"

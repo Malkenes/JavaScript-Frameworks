@@ -4,7 +4,7 @@ import StarRating from "../shared/starRating"
 import Price from "../shared/price"
 import { useCartStore } from "../../stores/useCartStore"
 export default function ProductDetails({product}) {
-    const { cart, addToCart } = useCartStore();
+    const { addToCart } = useCartStore();
     return (
         <section>
             <StyledProductDetails>
