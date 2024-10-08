@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import sunDown from "../assets/images/sundownBackground.jpeg";
+import sunDown from "../assets/images/SundownBackground.jpeg";
 export const StyledContact = styled.main`
 background: url(${sunDown});
 background-size: cover;
