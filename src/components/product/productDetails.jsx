@@ -4,7 +4,7 @@ import StarRating from "../shared/starRating"
 import Price from "../shared/price"
 import { useCartStore } from "../../stores/useCartStore"
 export default function ProductDetails({product}) {
-    const { cart, addToCart } = useCartStore();
+    const { addToCart } = useCartStore();
     return (
         <section>
             <StyledProductDetails>
@@ -13,7 +13,7 @@ export default function ProductDetails({product}) {
                 </div>
                 <div>
                     <h1>{product.title}</h1>
-                    <StarRating rating={Math.floor(product.rating)} size="24" />
+                    <StarRating rating={product.rating} size="24" />
                     <Price price={product.price} discountedPrice={product.discountedPrice} />
                     <FullButton onClick={() => addToCart(product)}>Add to Cart</FullButton>
                     <p>{product.description}</p>

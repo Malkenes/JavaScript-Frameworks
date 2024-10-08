@@ -10,7 +10,7 @@ export default function CheckoutSuccess() {
             </S.CheckContainer>
             <h1>Thank you for the purchase!</h1>
             <p>We have magically recived your payment and delivery details</p>
-            <p>Anticipate your order's arrival on November 31.</p>
+            <p>Anticipate your order&apos;s arrival on November 31.</p>
             <Link to={"/"}>Back to Store</Link>
         </S.StyledCheckoutSuccess>
     </main>

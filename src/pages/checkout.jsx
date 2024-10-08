@@ -1,7 +1,6 @@
 import { MdOutlineRemove , MdOutlineAdd, MdOutlineCreditCard} from "react-icons/md";
 
 import { StyledCheckout, StyledCheckoutItem, StyledAlterQuantity, StyledPayment, PaymentOption} from "./checkout.styles";
-import { StyledButton } from "../components/Button.styles";
 import { useCartStore } from "../stores/useCartStore";
 import CheckoutButton from "../components/checkoutButton";
 import Price from "../components/shared/price";
