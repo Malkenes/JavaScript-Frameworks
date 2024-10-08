@@ -38,13 +38,13 @@ export default function IndexPage() {
             </StyledDiscoverItem>
             <StyledDiscoverItem>
                 <div><img src={shampoo} alt="" /></div>
-                <h3>Fashion</h3>
-                Elevate your style with our  carefully curated collection
+                <h3>Beauty</h3>
+                Unleash your inner glow with our luxurious beauty essentials, crafted to enhance your natural radiance
             </StyledDiscoverItem>
             <StyledDiscoverItem>
                 <div><img src={toyCar} alt="" /></div>
-                <h3>Fashion</h3>
-                Elevate your style with our  carefully curated collection
+                <h3>Hobby</h3>
+                Fuel your passions and explore new horizons with our diverse range of hobby supplies, perfect for every enthusiast
             </StyledDiscoverItem>
         </StyledDiscover>
         <StyledAbout>

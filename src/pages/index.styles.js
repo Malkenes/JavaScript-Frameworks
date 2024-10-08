@@ -1,17 +1,20 @@
 import styled from "styled-components";
-import productsdisplay from "../assets/images/productsdisplay.png";
+import productsdisplay from "../assets/images/heroBg.jpg";
 export const StyledIndex = styled.main`
 `
 
 export const StyledHero = styled.section`
 display: flex;
 flex-direction: column;
+box-sizing: border-box;
 gap: 20px;
-min-height: 100vh;
 background: #F6F8FA;
 @media (min-width: 786px) {
     flex-direction: row;
     align-items: center;
+    h1 {
+        font-size: 3em;
+    }
 }
 `
 export const StyledHeroImage = styled.div`
@@ -32,16 +35,16 @@ align-items: center;
 @media (min-width: 786px) {
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: baseline;
 }
 `
 
 export const StyledDiscoverItem = styled.div`
 max-width: 350px;
-div {
-    display: block;
-}
+width: 100%;
+text-align: center;
 img {
+    height: 400px;
     width: 100%;
 }
 `

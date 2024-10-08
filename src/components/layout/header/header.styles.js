@@ -15,8 +15,10 @@ export const HeaderWrapper = styled.div`
 `
 export const LogoWrapper = styled.div`
 flex: 1;
+height: 50px;
 img {
   display: block;
+  height: 100%;
 }
 @media (min-width: 786px) {
   order: -1;

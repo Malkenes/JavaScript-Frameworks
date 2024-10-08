@@ -1,7 +1,7 @@
 import {useState} from "react"
 import CartButton from "../../cartButton"
 import NavBar from "./navBar"
-import QuickBoxLogo from "../../../assets/QuickBox.svg"
+import QuickBoxLogo from "../../../assets/images/QuickBoxLogo.png";
 import { HeaderWrapper, LogoWrapper, StyledHeader } from "./header.styles"
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
