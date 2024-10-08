@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { FullButton } from "./Button.styles";
-import { FormInputContainer } from "./contactForm.Styles";
+import { FormInputContainer } from "./contactForm.styles";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
