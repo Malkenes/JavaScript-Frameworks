@@ -23,12 +23,14 @@ export default function IndexPage() {
     if (isError) { return <p>{isError}</p>; }
     return <StyledIndex>
         <StyledHero>
+        <section>
             <StyledHeroImage />
             <div>
                 <h1>Discover The Latest Trends in Online Shopping</h1>
                 <p>Welcome to our online store, where we offer a carefully curated selection of high-quality products that cater to your every need</p>
                 <StyledAnchor href="#product-section">Shop Now</StyledAnchor>
             </div>
+        </section>
         </StyledHero>
         <StyledDiscover>
             <StyledDiscoverItem>
@@ -38,13 +40,13 @@ export default function IndexPage() {
             </StyledDiscoverItem>
             <StyledDiscoverItem>
                 <div><img src={shampoo} alt="" /></div>
-                <h3>Fashion</h3>
-                Elevate your style with our  carefully curated collection
+                <h3>Beauty</h3>
+                Unleash your inner glow with our luxurious beauty essentials, crafted to enhance your natural radiance
             </StyledDiscoverItem>
             <StyledDiscoverItem>
                 <div><img src={toyCar} alt="" /></div>
-                <h3>Fashion</h3>
-                Elevate your style with our  carefully curated collection
+                <h3>Hobby</h3>
+                Fuel your passions and explore new horizons with our diverse range of hobby supplies, perfect for every enthusiast
             </StyledDiscoverItem>
         </StyledDiscover>
         <StyledAbout>

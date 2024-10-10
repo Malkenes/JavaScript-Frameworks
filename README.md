@@ -1,8 +1,56 @@
-# React + Vite
+<p align="center">
+    <img src="src/assets/images/QuickBoxLogo.png" width="50%">
+</p>
+<h1 align="center">QuicBox</h1>
+<p align="center">A dynamic Ecom store</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
+* Add products to cart
+    - Browse products and add them to your cart
 
-Currently, two official plugins are available:
+* Search Functionality
+    - Find specific items or explore tags to discover unique treasures
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Responsive design
+    - Desktop, tablet and mobile friendly across most common browsers
+
+## Demo
+
+[Live Demo](https://resonant-sundae-e5c4f6.netlify.app/)
+
+## Built With
+
+- React
+
+## How to Use
+
+### Installing
+
+To clone and run this application you will need [Git](https://git-scm.com/) and [NodeJs](https://nodejs.org/)
+
+From the command line:
+```bash
+# Clone this repository
+git clone https://github.com/Malkenes/JavaScript-Frameworks.git
+
+# Go into the repository
+cd JavaScript-Frameworks
+
+# Install dependencies
+npm install
+
+# To build
+npm run build
+
+### Development
+```
+
+To run the application in development mode 
+```bash
+npm run dev
+```
+
+## Contact
+Marius Malkenes
+
+[My Email](marmal52030@stud.noroff.no)
