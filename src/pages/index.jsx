@@ -23,12 +23,14 @@ export default function IndexPage() {
     if (isError) { return <p>{isError}</p>; }
     return <StyledIndex>
         <StyledHero>
+        <section>
             <StyledHeroImage />
             <div>
                 <h1>Discover The Latest Trends in Online Shopping</h1>
                 <p>Welcome to our online store, where we offer a carefully curated selection of high-quality products that cater to your every need</p>
                 <StyledAnchor href="#product-section">Shop Now</StyledAnchor>
             </div>
+        </section>
         </StyledHero>
         <StyledDiscover>
             <StyledDiscoverItem>

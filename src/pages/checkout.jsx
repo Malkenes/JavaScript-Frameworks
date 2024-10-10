@@ -35,7 +35,7 @@ export default function Checkout() {
                 </StyledCheckoutItem>
             ))}
                 {totalPrice === 0 
-                ? (<p>Cart is empty</p>)
+                ? (<div><p>Cart is empty</p><a href="/"> return to home</a></div>)
                 : (                
                     <StyledCheckoutItem>
                     <h2>Total:</h2>
@@ -55,8 +55,10 @@ export default function Checkout() {
 function PaymentMethodSelector() {
 
     const [selectedOption, setSelectedOption] = useState('creditCard');
+    const totalItems = useCartStore((state) => state.totalItems(state));
 
-    return <StyledPayment>
+    if (totalItems > 0) {
+        return <StyledPayment>
         <legend>Choose Payment Method</legend>
         <PaymentOption checked={selectedOption === "creditCard"} onClick={() => setSelectedOption("creditCard")}>
             <MdOutlineCreditCard size={32} />
@@ -74,4 +76,5 @@ function PaymentMethodSelector() {
             <label htmlFor="paypal">PayPal</label>
         </PaymentOption>
     </StyledPayment>;
+    }
 }

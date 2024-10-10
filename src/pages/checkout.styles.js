@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const StyledCheckout = styled.main`
-display: flex;
-flex-direction: column;
 ul {
     list-style: none;
     padding: 0;
