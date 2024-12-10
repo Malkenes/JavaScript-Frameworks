@@ -24,7 +24,7 @@ import { MdOutlineSearch } from "react-icons/md";
 
 export default function IndexPage() {
   const { data, isLoading, isError } = useApi(
-    "https://v2.api.noroff.dev/online-shop/",
+    `${import.meta.env.VITE_NOROFF_BASE}online-shop/`,
   );
   const { filteredProducts, setProducts } = useProductStore();
   useEffect(() => {
