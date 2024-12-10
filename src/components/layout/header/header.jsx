@@ -1,15 +1,20 @@
-import {useState} from "react"
-import CartButton from "../../cartButton"
-import NavBar from "./navBar"
+import { useState } from "react";
+import CartButton from "../../cartButton";
+import NavBar from "./navBar";
 import QuickBoxLogo from "../../../assets/images/QuickBoxLogo.png";
-import { HeaderWrapper, LogoWrapper, StyledHeader } from "./header.styles"
+import { HeaderWrapper, LogoWrapper, StyledHeader } from "./header.styles";
+
 export default function Header() {
-    const [isOpen, setIsOpen] = useState(false);
-    return <StyledHeader>
-        <HeaderWrapper>
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <StyledHeader>
+      <HeaderWrapper>
         <NavBar isOpen={isOpen} setIsOpen={setIsOpen} />
-        <LogoWrapper><img src={QuickBoxLogo} alt="QuickBox logo" /></LogoWrapper>
+        <LogoWrapper>
+          <img src={QuickBoxLogo} alt="QuickBox logo" />
+        </LogoWrapper>
         <CartButton />
-        </HeaderWrapper>
+      </HeaderWrapper>
     </StyledHeader>
+  );
 }

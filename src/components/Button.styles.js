@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 const buttomTheme = `
   background: #E1251A;
@@ -32,16 +32,15 @@ export const StyledButton = styled.button`
 `;
 
 export const FullButton = styled(StyledButton)`
-margin-top: 10px;
+  margin-top: 10px;
   @media (min-width: 786px) {
-  width: 100%;
+    width: 100%;
   }
 `;
 
 export const NavButton = styled(StyledLink)`
-align-items: center;
-gap: 4px;
-justify-self: end;
-width: 100px;
+  align-items: center;
+  gap: 4px;
+  justify-self: end;
+  width: 100px;
 `;
-

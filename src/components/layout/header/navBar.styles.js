@@ -1,54 +1,52 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledNavBar = styled.nav`
-justify-self: start;
-button {
+  justify-self: start;
+  button {
     background: none;
-}
-div {
-width: 100%;
-z-index: -1;
-position: fixed;
-top: 0;
-left: 0;
-height: 100vh;
-max-height: ${({ $isOpen }) => ($isOpen ? "100vh" : "0")};
-transition: max-height 1s;
-overflow: hidden;
-background: #F6F8FA;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-ul {
+  }
+  div {
+    width: 100%;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    max-height: ${({ $isOpen }) => ($isOpen ? "100vh" : "0")};
+    transition: max-height 1s;
+    overflow: hidden;
+    background: #f6f8fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  ul {
     list-style: none;
     padding: 0;
-}
-li {
+  }
+  li {
     padding: 16px;
     font-size: 32px;
-}
-a {
+  }
+  a {
     color: black;
-}
-@media (min-width: 786px) {
-
+  }
+  @media (min-width: 786px) {
     button {
-        display: none;
+      display: none;
     }
     div {
-    display: contents;
+      display: contents;
     }
     ul {
-        position: relative;
-        background: none;
-        display: flex;
-        gap: 8px;
+      position: relative;
+      background: none;
+      display: flex;
+      gap: 8px;
     }
     li {
-        padding: 0;
-        font-size: 16px;
+      padding: 0;
+      font-size: 16px;
     }
-}
-
-`
+  }
+`;
