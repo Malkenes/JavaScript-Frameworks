@@ -8,7 +8,7 @@ import ProductList from "../components/product/productList";
 export default function Product() {
   let { id } = useParams();
   const { data, isLoading, isError } = useApi(
-    `https://v2.api.noroff.dev/online-shop/`,
+    `${import.meta.env.VITE_NOROFF_BASE}online-shop/`,
   );
   if (isLoading) {
     return <Loader />;
